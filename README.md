@@ -5,6 +5,6 @@ Install required modules using `pip install requirements.txt`
 
 `clanget.json` is required and no edits to file are needed.
 
-Rename `.env.template` to `.env` and enter values where required
+Rename `.env_template` to `.env` and enter values where required
 
 Can use Cron or other scheduler (daily recommended, no more frequent than hourly)
