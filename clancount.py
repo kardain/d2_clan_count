@@ -57,14 +57,14 @@ def main():
     
     api_count = clan_get.json()['Response']['detail']['memberCount']
     
-    with open ('clan_get.json','r') as infile:
+    with open ('clanget.json','r') as infile:
         current_json = json.load(infile)
         
     if current_json['first_run'] == "True":
         logging.info('First run detected. Updating local file with current information.')
         current_json.update({"memberCount": api_count})
         current_json.update({"first_run": "False"})
-        with open ('clan_get.json','w') as outfile:
+        with open ('clanget.json','w') as outfile:
             json.dump(current_json,outfile,indent = 4)
         time.sleep(1)
         logging.info('First run complete. Exiting.')
@@ -111,7 +111,7 @@ def main():
         
         current_json.update({"memberCount": api_count})
             
-        with open ('clan_get.json','w') as outfile:
+        with open ('clanget.json','w') as outfile:
             json.dump(current_json,outfile,indent = 4)
         
         exit()
