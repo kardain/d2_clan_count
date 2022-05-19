@@ -104,7 +104,7 @@ def main():
                 ]
             }
             logging.debug(payload)
-            response = http.post(uri, headers=discord_headers, json=payload)
+            response = requests.post(uri, headers=discord_headers, json=payload)
             logging.debug(response)
         
         logging.info('Writing new count to file and exiting.')
